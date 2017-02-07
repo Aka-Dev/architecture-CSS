@@ -1,0 +1,18 @@
+// File Name: _header.scss
+// Description: global header styles
+// Used by: style.scss and home.scss
+// Dependencies:
+// ------------------------------------------------------------
+.site-header {
+  @include rem("padding", 16, 40, 0, 67, 0);
+  background-color: $primaryColor;
+}
+.site-nav {
+  margin-bottom: 0;
+  margin-left  : 0;
+  list-style   : none;
+}
+.site-nav-item {
+  display: inline-block;
+  @include rem("margin-right", 16, 40);
+}

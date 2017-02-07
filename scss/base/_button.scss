@@ -1,0 +1,24 @@
+.button {
+  display           : inline-block;
+  vertical-align    : middle;
+  margin            : 0;
+  @include rem("padding", 16, 9, 17);
+  -webkit-appearance: none;
+  border            : 1px solid transparent;
+  border-radius     : 3px;
+  transition        : background-color 0.25s ease-out, color 0.25s ease-out;
+  @include rem("font-size", 16, $regularSize);
+  line-height       : 1;
+  text-align        : center;
+  cursor            : pointer;
+  background-color  : $buttonColor;
+  color             : $whiteColor;
+}
+[data-whatinput='mouse'] .button {
+  outline: 0;
+}
+.button:focus,
+.button:hover {
+  background-color: #258dad;
+  color           : #fefefe;
+}

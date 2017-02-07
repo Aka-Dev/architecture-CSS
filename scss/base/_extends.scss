@@ -1,0 +1,7 @@
+%marginAuto {
+  @include margin-auto();
+}
+
+%hideText {
+  @include hide-text();
+}
