@@ -1,0 +1,15 @@
+{
+  "name": "Pyxicom",
+  "description": "Starter Kit (Aquarium)",
+  "main": "index.js",
+  "authors": [
+    "Pyxicom"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Pyxicom",
+    "starter",
+    "kit"
+  ],
+  "homepage": ""
+}

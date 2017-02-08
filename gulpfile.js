@@ -8,11 +8,19 @@ var cleanCSS = require('gulp-clean-css');
 var spritesmith = require('gulp.spritesmith');
 var amdOptimize = require("amd-optimize");
 var concat = require('gulp-concat');
+var imagemin = require('gulp-imagemin');
+var psi = require('psi');
 
-
+// SASS DIRECTORY
 var scssDir = 'scss/**/*.scss';
+// CSS DIRECTORY
 var cssDir = 'css';
+// SITE URL
+var site = 'http://';
+// KEY
+var key = '';
 
+// COMPILE SASS
 gulp.task('sass', function() {
     return gulp.src(scssDir)
         .pipe(sourcemaps.init())
@@ -27,18 +35,53 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(cssDir));
 });
 
-gulp.task('sprite', function () {
-  var spriteData = gulp.src('img/icons/*.png').pipe(spritesmith({
-    imgName: '../img/sprite.png',
-    cssName: '_sprite.scss',
-    algorithm: 'top-down',
-    padding: 15
-  }));
+// GENERATE SPRITE IMAGE
+gulp.task('sprite', function() {
+    gulp.src('img/icons/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('img/icons/'));
+    var spriteData = gulp.src('img/icons/*.png').pipe(spritesmith({
+        imgName: '../img/sprite.png',
+        cssName: '_sprite.scss',
+        algorithm: 'top-down',
+        padding: 15
+    }));
 
-  spriteData.img.pipe(gulp.dest('./img/')); // output path for the sprite
-  spriteData.css.pipe(gulp.dest('./scss/base/')); // output path for the CSS
+    spriteData.img.pipe(gulp.dest('./img/')); // output path for the sprite
+    spriteData.css.pipe(gulp.dest('./scss/base/')); // output path for the CSS
 });
 
+// SASS WATCH
 gulp.task('sass:watch', function() {
     gulp.watch(scssDir, ['sass']);
 });
+
+// IMAGES OPTIMIZATIONS
+gulp.task('imgmin', function() {
+    gulp.src('img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('img'));
+});
+
+gulp.task('mobile', function () {
+    return psi(site, {
+        // key: key
+        nokey: 'true',
+        strategy: 'mobile',
+    }).then(function (data) {
+        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+        console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
+    });
+});
+
+gulp.task('desktop', function () {
+    return psi(site, {
+        nokey: 'true',
+        // key: key,
+        strategy: 'desktop',
+    }).then(function (data) {
+        console.log('Speed score: ' + data.ruleGroups.SPEED.score);
+    });
+});
+
+gulp.task('default', ['mobile']);
