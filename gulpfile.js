@@ -5,28 +5,16 @@ var sassLint = require('gulp-sass-lint');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var cleanCSS = require('gulp-clean-css');
-var requirejsOptimize = require('gulp-requirejs-optimize');
+var spritesmith = require('gulp.spritesmith');
+var amdOptimize = require("amd-optimize");
+var concat = require('gulp-concat');
+
 
 var scssDir = 'scss/**/*.scss';
 var cssDir = 'css';
 
 gulp.task('sass', function() {
     return gulp.src(scssDir)
-        // .pipe(sassLint({
-        //     options: {
-        //         formatter: 'stylish',
-        //         'merge-default-rules': false
-        //     },
-        //     // files: {
-        //     //     ignore: '**/*.scss'
-        //     // },
-        //     rules: {
-        //         'no-ids': 1,
-        //         'no-mergeable-selectors': 0
-        //     },
-        // }))
-        // .pipe(sassLint.format())
-        // .pipe(sassLint.failOnError())
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS({
@@ -39,12 +27,18 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(cssDir));
 });
 
-gulp.task('sass:watch', function() {
-    gulp.watch(scssDir, ['sass']);
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('img/icons/*.png').pipe(spritesmith({
+    imgName: '../img/sprite.png',
+    cssName: '_sprite.scss',
+    algorithm: 'top-down',
+    padding: 15
+  }));
+
+  spriteData.img.pipe(gulp.dest('./img/')); // output path for the sprite
+  spriteData.css.pipe(gulp.dest('./scss/base/')); // output path for the CSS
 });
 
-gulp.task('scripts', function () {
-    return gulp.src('js/modules/*.js')
-        .pipe(requirejsOptimize())
-        .pipe(gulp.dest('js'));
+gulp.task('sass:watch', function() {
+    gulp.watch(scssDir, ['sass']);
 });

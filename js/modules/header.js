@@ -1,9 +1,3 @@
-define(function() {
-  var obj = {
-    initialize: function() {
-      alert('Hello header !');
-    }
-  }
-
-  return obj;
-});
+var test = function() {
+  console.log('hello');
+};

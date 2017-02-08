@@ -7,6 +7,19 @@ select {
   width        : 100%;
   border-radius: 3px;
 }
+button {
+  padding           : 0;
+  -webkit-appearance: none;
+  -moz-appearance   : none;
+  appearance        : none;
+  border            : 0;
+  border-radius     : 3px;
+  background        : transparent;
+  line-height       : 1;
+}
+[data-whatinput='mouse'] button {
+  outline: 0;
+}
 [type='color'],
 [type='date'],
 [type='datetime'],
@@ -270,23 +283,23 @@ select[multiple] {
   background-image: none;
 }
 .is-invalid-input:not(:focus) {
-  border-color    : $errorColor;
+  border-color    : #c60f13;
   background-color: #f8e6e7;
 }
 .is-invalid-input:not(:focus)::-webkit-input-placeholder {
-  color: $errorColor;
+  color: #c60f13;
 }
 .is-invalid-input:not(:focus)::-moz-placeholder {
-  color: $errorColor;
+  color: #c60f13;
 }
 .is-invalid-input:not(:focus):-ms-input-placeholder {
-  color: $errorColor;
+  color: #c60f13;
 }
 .is-invalid-input:not(:focus)::placeholder {
-  color: $errorColor;
+  color: #c60f13;
 }
 .is-invalid-label {
-  color: $errorColor;
+  color: #c60f13;
 }
 .form-error {
   display      : none;
@@ -294,7 +307,7 @@ select[multiple] {
   margin-bottom: 1rem;
   font-size    : 0.75rem;
   font-weight  : bold;
-  color        : $errorColor;
+  color        : #c60f13;
 }
 .form-error.is-visible {
   display: block;

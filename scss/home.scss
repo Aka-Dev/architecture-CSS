@@ -3,18 +3,19 @@
 // ----------------------------------------------------------------------
 @import "base/mixins";
 @import "base/variables";
+@import "base/sprite";
 @import "base/breakpoint";
 @import "base/extends";
 @import "base/normalize";
-@import "base/typography";
-@import "base/float";
-@import "base/button";
+@import "base/foundation/typography";
+@import "base/foundation/float";
+@import "base/foundation/button";
 @import "base/base";
 // ----------------------------------------------------------------------
   // Layout
 // ----------------------------------------------------------------------
-@import "layout/grid";
-@import "layout/visibility";
+@import "layout/foundation/grid";
+@import "layout/foundation/visibility";
 
 // ----------------------------------------------------------------------
   // Modules
@@ -25,4 +26,3 @@
 // ----------------------------------------------------------------------
 	// State
 // ----------------------------------------------------------------------
-

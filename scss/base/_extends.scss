@@ -5,3 +5,7 @@
 %hideText {
   @include hide-text();
 }
+
+%borderBox {
+  @include box-sizing(border-box);
+}
