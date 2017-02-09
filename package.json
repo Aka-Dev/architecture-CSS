@@ -1,12 +1,12 @@
 {
-  "name": "architecture_css",
+  "name": "aquarium",
   "version": "1.0.0",
-  "description": "Architecture CSS",
+  "description": "Starter Kit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Anas ABDENNAIM",
+  "author": "Anas Abdennaim, Pyxicom",
   "license": "ISC",
   "devDependencies": {
     "amd-optimize": "^0.6.1",
