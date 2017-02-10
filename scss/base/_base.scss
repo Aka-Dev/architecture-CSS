@@ -5,8 +5,8 @@
 .v-middle {
     vertical-align: middle;
 }
-// Background Color
 
+// Background Color
 .bg-white {
     background-color: $whiteColor;
 }
@@ -26,8 +26,8 @@
 .bg-gray {
     background-color: $grayColor1;
 }
-// Color
 
+// Color
 .cl-gray {
     color: $grayColor;
 }
@@ -35,12 +35,12 @@
 .cl-white {
     color: $whiteColor !important;
 }
-// Margin
 
+// Margin
 .margin-bottom-34 {
     @include rem( 'margin-bottom', 16, 34);
 }
 
 .borderBox {
-  @extend %borderBox;
+    @extend %borderBox;
 }
