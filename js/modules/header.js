@@ -1,9 +1,9 @@
 define(function() {
-  var obj = {
+  var header = {
     initialize: function() {
       alert('Hello Header');
     }
   };
 
-  return obj;
+  return header;
 });

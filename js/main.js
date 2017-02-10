@@ -30,5 +30,4 @@ var modules = [
 require(modules, function (jquery, flexslider, uniform, header, footer) {
     header.initialize();
     footer.initialize();
-    jquery('.site-content-posts-list').flexslider();
 });
