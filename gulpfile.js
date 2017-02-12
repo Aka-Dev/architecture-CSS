@@ -51,11 +51,6 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('./scss/base/')); // output path for the CSS
 });
 
-// SASS WATCH
-gulp.task('sass:watch', function() {
-    gulp.watch(scssDir, ['sass']);
-});
-
 // IMAGES OPTIMIZATIONS
 gulp.task('imgmin', function() {
     gulp.src('img/*')
@@ -63,25 +58,30 @@ gulp.task('imgmin', function() {
         .pipe(gulp.dest('img'));
 });
 
-gulp.task('mobile', function () {
+gulp.task('mobile', function() {
     return psi(site, {
         // key: key
         nokey: 'true',
         strategy: 'mobile',
-    }).then(function (data) {
+    }).then(function(data) {
         console.log('Speed score: ' + data.ruleGroups.SPEED.score);
         console.log('Usability score: ' + data.ruleGroups.USABILITY.score);
     });
 });
 
-gulp.task('desktop', function () {
+gulp.task('desktop', function() {
     return psi(site, {
         nokey: 'true',
         // key: key,
         strategy: 'desktop',
-    }).then(function (data) {
+    }).then(function(data) {
         console.log('Speed score: ' + data.ruleGroups.SPEED.score);
     });
 });
 
-gulp.task('default', ['mobile']);
+// gulp.task('default', ['mobile']);
+
+// WATCH
+gulp.task('watch', function() {
+    gulp.watch(scssDir, ['imgmin', 'sprite', 'sass']);
+});

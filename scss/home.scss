@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------
-  // Base
+// Base
 // ----------------------------------------------------------------------
 @import "base/mixins";
 @import "base/variables";
@@ -7,22 +7,21 @@
 @import "base/breakpoint";
 @import "base/extends";
 @import "base/normalize";
-@import "base/foundation/typography";
-@import "base/foundation/float";
-@import "base/foundation/button";
+@import "base/typography/fonts";
+@import "base/typography/typography";
+@import "base/float";
+@import "base/form/button";
+@import "base/form/form";
 @import "base/base";
 // ----------------------------------------------------------------------
-  // Layout
+// Layout
 // ----------------------------------------------------------------------
-@import "layout/foundation/grid";
-@import "layout/foundation/visibility";
-
+@import "layout/grid";
 // ----------------------------------------------------------------------
-  // Modules
+// Modules
 // ----------------------------------------------------------------------
 @import "modules/header";
 @import "modules/footer";
-
 // ----------------------------------------------------------------------
-	// State
+// State
 // ----------------------------------------------------------------------
