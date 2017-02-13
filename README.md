@@ -1,16 +1,16 @@
 #Starter Kit Pyxicom 
-Je me suis inspiré de plusieurs Starter Kit (Evernote, DBM, Fullsix et Google).
-Voici un Starter Kit de développement frontend conçu comme point de départ pour de nouveaux projets.
+Je me suis inspiré de plusieurs Starter Kit (Evernote, DBM, Fullsix et Google).<br>
+Voici un Starter Kit de développement frontend conçu comme point de départ pour de nouveaux projets.<br>
 le but de Starter Kit est d'être un point de départ pour les nouveaux projets et aussi de nous permettre de respecter les 4 objectifs 
-suivant:
-    - Prédictable,
-    - Modulable - Réutilisable
-    - Maintenable
-    - Evolutif
-Tant côté CSS que Javascript.
+suivant:<br>
+    - Prédictable,<br>
+    - Modulable - Réutilisable<br>
+    - Maintenable<br>
+    - Evolutif<br>
+Tant côté CSS que Javascript.<br>
 
 ##Architecture CSS 
-Structure SCSS:
+Structure SCSS: <br>
     - Base: 
     - Layout: 
     - Modules: 
