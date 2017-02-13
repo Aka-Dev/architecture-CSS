@@ -22,7 +22,7 @@ var modules = [
     'flexslider',
     'uniform',
     'modules/header',
-    'modules/footer'
+    'modules/footer',
 ];
 
 
