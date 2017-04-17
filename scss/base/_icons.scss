@@ -7,29 +7,7 @@
     line-height: 60px;
 }
 
-.icon-android {
+/*.icon-android {
     @include sprite($icon-android);
-}
+}*/
 
-.icon-ios {
-    @include sprite($icon-apple);
-}
-
-.icon-windows {
-    @include sprite($icon-windows);
-}
-.icon-vectors {
-    @include sprite($icon-vectors);
-}
-
-.icon-pixel-perfect {
-    @include sprite($icon-pixel-perfect);
-}
-
-.icon-retina-ready {
-    @include sprite($icon-retina-ready);
-}
-
-.icon-smart-objects {
-    @include sprite($icon-smart-objects);
-}

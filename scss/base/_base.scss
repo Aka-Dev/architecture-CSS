@@ -1,51 +1,5 @@
-.border-radius {
-    border-radius: 50%;
-}
-
-.v-middle {
-    vertical-align: middle;
-}
-
-// Background Color
-.bg-white {
-    background-color: $whiteColor;
-}
-
-.bg-gray {
-    background-color: $grayColor1;
-}
-
-.bg-blue {
-    background-color: $primaryColor;
-}
-
-.bg-blue-light {
-    background-color: $blueColor;
-}
-
-.bg-gray {
-    background-color: $grayColor1;
-}
-
-// Color
-.cl-gray {
-    color: $grayColor;
-}
-
-.cl-white {
-    color: $whiteColor !important;
-}
-
-// Margin
-.margin-bottom-34 {
-    @include rem( 'margin-bottom', 16, 34);
-}
-
-.borderBox {
-    @extend %borderBox;
-}
-
-.test {
-    padding: 0;
-    margin: 0;
-}
+// File Name: _base.scss
+// Description: global base styles
+// Used by: style.scss & home.scss
+// Dependencies:
+// ------------------------------------------------------------

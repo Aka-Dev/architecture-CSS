@@ -4,7 +4,7 @@
 // Dependencies:
 // ------------------------------------------------------------
 .site-header {
-  @include rem("padding", 16, 40, 0, 67, 0);
+  padding: rem(40) 0 rem(67) 0;
   background-color: $primaryColor;
 }
 .site-nav {
@@ -14,5 +14,5 @@
 }
 .site-nav-item {
   display: inline-block;
-  @include rem("margin-right", 16, 40);
+  margin-right: rem(40);
 }

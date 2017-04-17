@@ -2,22 +2,22 @@
     display: inline-block;
     vertical-align: middle;
     margin: 0;
-    @include rem("padding", 16, 9, 17);
+    padding: rem(9) rem(17);
     -webkit-appearance: none;
     border: 1px solid transparent;
     border-radius: 3px;
     transition: background-color 0.25s ease-out, color 0.25s ease-out;
-    @include rem("font-size", 16, $regularSize);
+    font-size: rem($regularSize);
     line-height: 1;
     text-align: center;
     cursor: pointer;
-    background-color: $blueColor;
-    color: $whiteColor;
+    background-color: $color2;
+    color: $color1;
 
     &.button-simple {
         padding-left: 0;
-        @include rem( 'font-size', 16, 13);
-        color: $blueColor;
+        font-size: rem(13);
+        color: $color2;
         background: transparent;
 
         &:hover {

@@ -69,7 +69,7 @@ h1 {
   &.header-title {
     font-size  : $primarySize;
     font-weight: $bold;
-    color      : $whiteColor;
+    color      : $color1;
     line-height: $primaryLineHeight;
   }
 }
@@ -129,9 +129,9 @@ a {
   text-decoration: none;
   cursor         : pointer;
   &.site-nav-link {
-    @include rem("font-size", 16, $regularSize);
+    font-size: rem($regularSize);
     font-weight: $semiBold;
-    color      : $whiteColor;
+    color      : $color1;
     line-height: $primaryLineHeight;
   }
 }
