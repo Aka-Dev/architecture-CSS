@@ -1,4 +1,4 @@
-# Starter Kit Pyxicom 
+# Starter Kit(Aquarium)
 ```Je me suis inspiré de plusieurs Starter Kit (Evernote, DBM, Fullsix et Google).```
 ```SMACSS (Scalable and Modular Architecture for CSS): A flexible guide to developing sites small and large.```
 ```Voici un Starter Kit de développement frontend conçu comme point de départ pour de nouveaux projets.```
