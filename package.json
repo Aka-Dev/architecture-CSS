@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Anas Abdennaim, Pyxicom",
+  "author": "Anas Abdennaim",
   "license": "ISC",
   "devDependencies": {
     "amd-optimize": "^0.6.1",
