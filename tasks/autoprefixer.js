@@ -4,13 +4,13 @@ var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 
 // AUTOPREFIXER
-gulp.task('autoprefixer', function() {
+gulp.task('autoprefixer', function () {
     return gulp.src([
-        'css/style.css',
-        'css/home.css'
+            'css/style.css',
+            'css/home.css'
         ])
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ["> 1%", "last 2 versions", "ie 10"],
             cascade: false
         }))
         .pipe(gulp.dest('css'))

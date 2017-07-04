@@ -2,12 +2,10 @@
 
 var gulp = require('gulp');
 var spritesmith = require('gulp.spritesmith');
-var imagemin = require('gulp-imagemin');
 
 // GENERATE SPRITE IMAGE
 gulp.task('sprite', function() {
     gulp.src('img/icons/*')
-        .pipe(imagemin())
         .pipe(gulp.dest('img/icons/'));
     var spriteData = gulp.src('img/icons/*.png').pipe(spritesmith({
         imgName: '../img/sprite.png',
