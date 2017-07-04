@@ -1,0 +1,15 @@
+// File Name: _post-list.scss
+// Description: global posts list block styles
+// Used by: style.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+.site-content-posts-list {
+    @include rem( 'padding', 16, 60, 0, 70);
+}
+
+.posts-list {
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}

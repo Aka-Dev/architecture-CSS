@@ -1,0 +1,11 @@
+// File Name: _available.scss
+// Description: global available block styles
+// Used by: style.scss
+// Dependencies:
+// ------------------------------------------------------------
+.site-content-availabe {
+  @include rem("padding", 16, 45, 0, 48, 0);
+  h4 {
+    @include rem("margin", 16, 25, 0, 0);
+  }
+}

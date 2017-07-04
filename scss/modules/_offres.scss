@@ -1,0 +1,13 @@
+// File Name: _offres.scss
+// Description: global offres styles
+// Used by: style.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+.site-content-offres-list {
+    @include rem( 'padding', 16, 100, 0, 90);
+}
+
+.row.offre:not(:last-of-type) {
+    @include rem( 'margin-bottom', 16, 110);
+}
