@@ -14,5 +14,5 @@ var scssDir = 'scss/**/*.scss';
 
 // WATCH
 gulp.task('watch', function() {
-    gulp.watch(scssDir, ['sprite', 'sass', 'autoprefixer']);
+    gulp.watch(scssDir, ['sprite', 'sass']);
 });

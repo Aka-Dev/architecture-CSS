@@ -15,6 +15,10 @@ gulp.task('sass', function() {
     return gulp.src(scssDir)
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ["> 1%", "last 2 versions", "ie 10"],
+            cascade: false
+        }))
         .pipe(cleanCSS({
             debug: true
         }, function(details) {
